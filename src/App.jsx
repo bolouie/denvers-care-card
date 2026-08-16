@@ -29,7 +29,7 @@ function App() {
       });
 
       if (!response.ok) {
-        throw new Error("The care card could not be generated. Please try again.");
+        throw new Error("Denver's care card is taking a moment. Please try again.");
       }
 
       // step 3: open the envelope coming back

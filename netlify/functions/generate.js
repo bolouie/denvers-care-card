@@ -51,7 +51,7 @@ ${description}`;
 
         // Retry with exponential backoff, but ONLY for transient 503 errors.
         let response;
-        const maxAttempts = 4;
+        const maxAttempts = 6;
         for (let attempt = 1; attempt <= maxAttempts; attempt++) {
             response = await fetch(url, {
                 method: "POST",
