@@ -1,6 +1,7 @@
 import { useState } from "react";
 import CareForm from "./components/CareForm";
 import CareCard from "./components/CareCard";
+import styles from "./App.module.css";
 
 function App() {
   const [notes, setNotes] = useState("");
@@ -44,19 +45,28 @@ function App() {
   }
 
   return (
-    <>
-      <CareForm
-        notes={notes}
-        setNotes={setNotes}
-        loading={loading}
-        onGenerate={handleGenerate}
-        error={error}
-      />
-      <CareCard
-        card={card}
-      />
-    </>
+    <div className={styles.page}>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Denver's Care Card</h1>
+        <p className={styles.subtitle}>
+          Turn a quick note about your dog into a care card worth sharing.
+        </p>
+        <CareForm
+          notes={notes}
+          setNotes={setNotes}
+          loading={loading}
+          onGenerate={handleGenerate}
+          error={error}
+        />
+
+        {loading && (
+          <p className={styles.loading}>Generating Denver's care card...</p>
+        )}
+        <CareCard
+          card={card}
+        />
+      </div>
+    </div>
   );
 }
-
 export default App;

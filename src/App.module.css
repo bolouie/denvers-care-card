@@ -1,0 +1,39 @@
+.page {
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+  background: var(--pack-surface);
+  /* neutral grey behind the card */
+}
+
+.container {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 2.5rem;
+  background: var(--pack-white);
+  /* the contained white card */
+  border: 1px solid #E4E7E9;
+  /* quiet hairline, like Figma */
+  border-radius: var(--pack-radius);
+}
+
+.title {
+  font-family: var(--pack-font-heading);
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: var(--pack-text);
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--pack-action);
+  margin: 0 0 2rem;
+}
+
+.loading {
+  margin: 1.5rem auto 0;
+  text-align: center;
+  color: var(--pack-action);
+  font-style: italic;
+}
