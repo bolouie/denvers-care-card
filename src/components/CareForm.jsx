@@ -1,4 +1,4 @@
-function CareForm({ notes, setNotes, onGenerate, loading }) {
+function CareForm({ notes, setNotes, onGenerate, loading, error }) {
     return (
         <div>
             <textarea
@@ -10,6 +10,7 @@ function CareForm({ notes, setNotes, onGenerate, loading }) {
             <button onClick={onGenerate} disabled={loading}>
                 {loading ? "Generating..." : "Generate care card"}
             </button>
+            {error && <p role="alert">{error}</p>}
         </div>
     )
 }
