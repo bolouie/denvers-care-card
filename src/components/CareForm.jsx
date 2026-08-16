@@ -3,7 +3,7 @@ import styles from "./CareForm.module.css";
 function CareForm({ notes, setNotes, onGenerate, loading, error }) {
     return (
         <div>
-            <p className={styles.helper}>The more details you give, the better the care card. Try feeding, meds, walks, quirks, and vet info.</p>
+            <p className={styles.helper}>The more details you give, the better the care card.</p>
             <textarea
                 className={styles.textarea}
                 value={notes}
