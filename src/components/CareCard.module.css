@@ -32,3 +32,20 @@
 .value {
     color: var(--pack-text);
 }
+
+.copyButton {
+    margin-top: 1.5rem;
+    padding: 0.55rem 1.1rem;
+    font-family: var(--pack-font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--pack-action);
+    background: transparent;
+    border: 1px solid var(--pack-action);
+    border-radius: var(--pack-radius);
+    cursor: pointer;
+}
+
+.copyButton:hover {
+    background: var(--pack-surface);
+}
